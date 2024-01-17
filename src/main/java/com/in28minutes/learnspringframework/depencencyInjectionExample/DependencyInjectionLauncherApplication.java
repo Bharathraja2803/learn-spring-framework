@@ -55,8 +55,10 @@ class Dependency2 {
 @ComponentScan
 public class DependencyInjectionLauncherApplication {
     public static void main(String[] args) {
-        var context = new AnnotationConfigApplicationContext(DependencyInjectionLauncherApplication.class);
-        System.out.println(context.getBean(YourBusinessClass.class));
+        try(var context = new AnnotationConfigApplicationContext(DependencyInjectionLauncherApplication.class)){
+
+        }
+
     }
 
 }
